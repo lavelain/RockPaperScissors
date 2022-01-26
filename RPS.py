@@ -1,4 +1,4 @@
-# Import Required Library
+# Import Required Libraries
 from tkinter import *
 import random
 
@@ -15,7 +15,7 @@ root.title("Rock Paper Scissors! Game")
 computer_value = {
 	"0":"Rock",
 	"1":"Paper",
-	"2":"Scissor"
+	"2":"Scissors"
 }
 
 # Reset The Game
@@ -38,7 +38,7 @@ def isrock():
 	c_v = computer_value[str(random.randint(0,2))]
 	if c_v == "Rock":
 		match_result = "Draw"
-	elif c_v=="Scissor":
+	elif c_v=="Scissors":
 		match_result = "You Win!"
 	else:
 		match_result = "Computer Wins"
@@ -52,7 +52,7 @@ def ispaper():
 	c_v = computer_value[str(random.randint(0, 2))]
 	if c_v == "Paper":
 		match_result = "Draw"
-	elif c_v=="Scissor":
+	elif c_v=="Scissors":
 		match_result = "Computer Wins"
 	else:
 		match_result = "You Win!"
@@ -66,12 +66,12 @@ def isscissor():
 	c_v = computer_value[str(random.randint(0,2))]
 	if c_v == "Rock":
 		match_result = "Computer Wins"
-	elif c_v == "Scissor":
+	elif c_v == "Scissors":
 		match_result = "Draw"
 	else:
 		match_result = "You Win!"
 	l4.config(text = match_result)
-	l1.config(text = "Scissor")
+	l1.config(text = "Scissors")
 	l3.config(text = c_v)
 	button_disable()
 
@@ -124,7 +124,7 @@ b2 = Button(frame1, text = "Paper ",
 			font = 10, width = 7,
 			command = ispaper)
 
-b3 = Button(frame1, text = "Scissor",
+b3 = Button(frame1, text = "Scissors",
 			font = 10, width = 7,
 			command = isscissor)
 
